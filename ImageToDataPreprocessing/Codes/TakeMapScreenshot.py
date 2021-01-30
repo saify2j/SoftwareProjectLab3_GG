@@ -4,7 +4,7 @@
 from selenium import webdriver
 import time
 from PIL import Image
-areas = ['Mohakhali', 'Gulshan']
+areas = ['Mohakhali', 'Gulshan', 'Uttara']
 area = 'Mohakhali'
 driver = webdriver.Chrome("C:\webdriver\chromedriver.exe")
 driver.get('https://www.google.com/maps/@23.7985053,90.3754991,15z/data=!5m1!1e1')

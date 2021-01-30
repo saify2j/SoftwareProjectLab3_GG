@@ -1,0 +1,10 @@
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\bin\Debug\TrafficAnalyzerUI.exe.config
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\bin\Debug\TrafficAnalyzerUI.exe
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\bin\Debug\TrafficAnalyzerUI.pdb
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\obj\Debug\TrafficAnalyzerUI.csprojAssemblyReference.cache
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\obj\Debug\TrafficAnalyzerUI.Form1.resources
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\obj\Debug\TrafficAnalyzerUI.Properties.Resources.resources
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\obj\Debug\TrafficAnalyzerUI.csproj.GenerateResource.cache
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\obj\Debug\TrafficAnalyzerUI.csproj.CoreCompileInputs.cache
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\obj\Debug\TrafficAnalyzerUI.exe
+G:\SPL3 Repo\SoftwareProjectLab3_GG\TrafficAnalyzerUI\obj\Debug\TrafficAnalyzerUI.pdb

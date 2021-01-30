@@ -24,7 +24,7 @@ for filepath in glob.iglob(r'C:\Users\User\PycharmProjects\map_image_automation\
     (tH, tW) = template.shape[:2]
     #cv2.imshow("template", template)
 
-    original_image = cv2.imread('..\\Images\\mapImage2.PNG')
+    original_image = cv2.imread('..\\Images\\Mohakhali_24012021_Sunday_21_00_00.PNG')
     final = original_image.copy()
     gray = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
     found = None
@@ -53,4 +53,4 @@ for filepath in glob.iglob(r'C:\Users\User\PycharmProjects\map_image_automation\
     #cv2.imshow('result', final)
     #cv2.waitKey(0)
 
-    cv2.imwrite('..\\Images\\mapImage2.PNG', final)
+    cv2.imwrite('..\\Images\\Mohakhali_24012021_Sunday_21_00_00.PNG', final)
