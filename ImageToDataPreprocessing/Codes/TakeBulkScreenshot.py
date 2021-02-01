@@ -1,14 +1,16 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from datetime import datetime
 import os
 import time
 from PIL import Image
 
-areas = ['Mohakhali', 'Gulshan', 'Uttara']
-driver = webdriver.Chrome("C:\webdriver\chromedriver.exe")
+areas = ['Mohakhali', 'Gulshan', 'Uttara','Farmgate','Dhanmondi','Karwan Bazar','Sadarghat','Kalabagan','Mirpur 1','Mirpur 10','Shahbagh', 'Kamalapur','Tejgaon','Mohammadpur','Katabon']
+driver = webdriver.Chrome(ChromeDriverManager().install())
+
 driver.get('https://www.google.com/maps/@23.7985053,90.3754991,15z/data=!5m1!1e1')
 driver.maximize_window()
-path = 'G:\SPL3 Repo\SoftwareProjectLab3_GG\ImageToDataPreprocessing\Dataset'
+path = '/home/saif/SoftwareProjectLab3_GG/ImageToDataPreprocessing/Dataset'
 
 
 # Check whether the
@@ -24,13 +26,15 @@ for area in areas:
     driver.execute_script("document.body.style.zoom='120 %'")
 
     now = datetime.now()
-    date_time = now.strftime("%d%m%Y%H_%M_%S")
+    date_time = now.strftime("_%A_%d%m%Y_%H_%M_%S")
 
-    time.sleep(3)
+    time.sleep(5)
     fileName = str(area)+date_time+".png"
-    pathtoSave = path+"\\"+area
+    pathtoSave = path+"//"+area
     isdir = os.path.isdir(pathtoSave)
     #fileName = os.path.join(pathtoSave, fileName)
+    print(pathtoSave)
+    print(isdir);
     if(isdir):
         print("Path found");
         print(fileName)
@@ -38,18 +42,17 @@ for area in areas:
             os.path.join(os.path.dirname(os.path.realpath(__file__)), pathtoSave, fileName))
         #driver.save_screenshot(fileName)
     time.sleep(3)
-
-
-
     # open the image using Pillow
-    # test_image = 'Images/' + fileName
-    # original = Image.open(test_image)
+    test_image = pathtoSave+'//' + fileName
+    original = Image.open(test_image)
     #
-    # width, height = original.size  # Get dimensions
-    # left = width / 3
-    # top = 0
-    # right = width
-    # bottom = height
-    # cropped_example = original.crop((left, top, right, bottom))
-    #
-    # cropped_example.save('Images/' + fileName)
+    width, height = original.size  # Get dimensions
+    left = width / 3
+    top = 0
+    right = width
+    bottom = height
+    cropped_example = original.crop((left, top, right, bottom))
+    cropped_example.save(pathtoSave+'//' + fileName)	
+driver.close()
+
+    
