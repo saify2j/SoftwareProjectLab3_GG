@@ -24,7 +24,7 @@ for filepath in glob.iglob(r'C:\Users\User\PycharmProjects\map_image_automation\
     (tH, tW) = template.shape[:2]
     #cv2.imshow("template", template)
 
-    original_image = cv2.imread('..\\Images\\Mohakhali_24012021_Sunday_21_00_00.PNG')
+    original_image = cv2.imread('test_for_doc_res_object_rem.PNG')
     final = original_image.copy()
     gray = cv2.cvtColor(original_image, cv2.COLOR_BGR2GRAY)
     found = None
@@ -50,7 +50,7 @@ for filepath in glob.iglob(r'C:\Users\User\PycharmProjects\map_image_automation\
     #cv2.imshow('detected', original_image)
 
     cv2.rectangle(final, (start_x, start_y), (end_x, end_y), (255, 255, 255), -1)
-    #cv2.imshow('result', final)
+    cv2.imshow('result', final)
     #cv2.waitKey(0)
 
-    cv2.imwrite('..\\Images\\Mohakhali_24012021_Sunday_21_00_00.PNG', final)
+    cv2.imwrite('test_for_doc_res_object_rem.PNG', final)

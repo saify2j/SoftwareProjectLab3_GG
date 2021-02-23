@@ -3,7 +3,7 @@ import numpy as np
 import cv2
 ########## DETECT LINES
 
-inputImage = cv2.imread("MohakhaliRes.png")
+inputImage = cv2.imread("test_for_doc_res_object_rem_res.PNG")
 inputImageGray = cv2.cvtColor(inputImage, cv2.COLOR_BGR2GRAY)
 edges = cv2.Canny(inputImageGray, 150, 200, apertureSize = 3)
 minLineLength = 30
