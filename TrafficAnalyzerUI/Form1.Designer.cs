@@ -1,5 +1,6 @@
 ﻿
 using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace TrafficAnalyzerUI
 {
@@ -38,17 +39,11 @@ namespace TrafficAnalyzerUI
             this.label2 = new System.Windows.Forms.Label();
             this.radioButton1 = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.panel5 = new System.Windows.Forms.Panel();
             this.labelpy = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // comboBox1
@@ -58,10 +53,18 @@ namespace TrafficAnalyzerUI
             "Mohakhali",
             "Gulshan",
             "Uttara",
-            "Shahbagh"});
+            "Shahbagh",
+            "Kalabagan",
+            "Katabon",
+            "Dhanmondi",
+            "Sadarghat",
+            "Tejgaon",
+            "Karwan Bazar",
+            "Mirpur 1",
+            "Mirpur 10"});
             this.comboBox1.Location = new System.Drawing.Point(131, 104);
             this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 21);
+            this.comboBox1.Size = new System.Drawing.Size(150, 21);
             this.comboBox1.TabIndex = 0;
             // 
             // label1
@@ -77,9 +80,11 @@ namespace TrafficAnalyzerUI
             // 
             // dateTimePicker1
             // 
+            this.dateTimePicker1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(131, 141);
             this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(121, 20);
+            this.dateTimePicker1.Size = new System.Drawing.Size(150, 20);
             this.dateTimePicker1.TabIndex = 2;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
@@ -118,41 +123,6 @@ namespace TrafficAnalyzerUI
             this.radioButton2.UseVisualStyleBackColor = true;
             this.radioButton2.CheckedChanged += new System.EventHandler(this.radioButton2_CheckedChanged);
             // 
-            // panel1
-            // 
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
-            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Location = new System.Drawing.Point(424, 1);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(507, 327);
-            this.panel1.TabIndex = 6;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
-            // 
-            // panel2
-            // 
-            this.panel2.Location = new System.Drawing.Point(0, 324);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(451, 327);
-            this.panel2.TabIndex = 7;
-            // 
-            // panel3
-            // 
-            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
-            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel3.Controls.Add(this.panel4);
-            this.panel3.Location = new System.Drawing.Point(421, 357);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(510, 327);
-            this.panel3.TabIndex = 8;
-            // 
-            // panel4
-            // 
-            this.panel4.Location = new System.Drawing.Point(0, 324);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(451, 327);
-            this.panel4.TabIndex = 7;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
@@ -184,15 +154,6 @@ namespace TrafficAnalyzerUI
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // panel5
-            // 
-            this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
-            this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Location = new System.Drawing.Point(12, 357);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(392, 327);
-            this.panel5.TabIndex = 13;
-            // 
             // labelpy
             // 
             this.labelpy.AutoSize = true;
@@ -201,18 +162,26 @@ namespace TrafficAnalyzerUI
             this.labelpy.Size = new System.Drawing.Size(0, 13);
             this.labelpy.TabIndex = 14;
             // 
+            // panel3
+            // 
+            this.panel3.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel3.BackgroundImage")));
+            this.panel3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.panel3.Location = new System.Drawing.Point(300, 30);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1227, 817);
+            this.panel3.TabIndex = 8;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 732);
+            this.ClientSize = new System.Drawing.Size(1264, 861);
             this.Controls.Add(this.labelpy);
-            this.Controls.Add(this.panel5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.radioButton2);
             this.Controls.Add(this.radioButton1);
             this.Controls.Add(this.label2);
@@ -220,9 +189,7 @@ namespace TrafficAnalyzerUI
             this.Controls.Add(this.label1);
             this.Controls.Add(this.comboBox1);
             this.Name = "Form1";
-            this.Text = "Form1";
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
+            this.Text = "Traffic Flow Analysis Tool";
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -236,15 +203,11 @@ namespace TrafficAnalyzerUI
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RadioButton radioButton1;
         private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Label labelpy;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

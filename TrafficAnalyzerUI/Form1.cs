@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,9 +18,6 @@ namespace TrafficAnalyzerUI
             InitializeComponent();
             dateTimePicker1.Hide();
             label2.Hide();
-            panel1.Hide();
-            panel3.Hide();
-            panel5.Hide();
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -71,19 +69,48 @@ namespace TrafficAnalyzerUI
         {
 
         }
-
+        public Image Base64ToImage(string base64String)
+        {
+            // Convert base 64 string to byte[]
+            byte[] imageBytes = Convert.FromBase64String(base64String);
+            // Convert byte[] to Image
+            using (var ms = new MemoryStream(imageBytes, 0, imageBytes.Length))
+            {
+                Image image = Image.FromStream(ms, true);
+                return image;
+            }
+        }
         private void button1_Click(object sender, EventArgs e)
         {
-            string x = RunPython.run_cmd("", "G:\\test.py");
-            labelpy.Text = x;
-            if (radioButton1.Checked)
+            try
             {
-                panel1.Show();
-                panel3.Show();
+
+                // string x = RunPython.run_cmd("", "G:\\test.py");
+                string code_path = AppDomain.CurrentDomain.BaseDirectory;
+                // labelpy.Text = x;
+                if (radioButton1.Checked)
+                {
+                    var area = comboBox1.SelectedItem.ToString();
+                    var dateTime = DateTime.Now;
+                    var day = dateTime.DayOfWeek.ToString();
+                    var timeOnly = dateTime.ToString("HH:mm");
+                    string x = RunPython.run_cmd("", $@"{code_path}Codes\analyze.py {area} {day} {timeOnly}");
+                    panel3.BackgroundImage = Base64ToImage(x);
+                }
+                else
+                {
+                    var area = comboBox1.SelectedItem.ToString();
+                    var dateTime = dateTimePicker1.Value;
+                    var day = dateTime.DayOfWeek.ToString();
+                    var timeOnly = dateTime.ToString("HH:mm");
+                    string x = RunPython.run_cmd("", $@"{code_path}Codes\test.py {area} {day} {timeOnly}");
+                    panel3.BackgroundImage = Base64ToImage(x);
+                }
             }
-            else
+            catch (Exception ex)
             {
-                panel5.Show();
+
+                throw new Exception(ex.Message);
             }
             
         }
@@ -96,9 +123,12 @@ namespace TrafficAnalyzerUI
                 label2.Hide();
             }
             labelpy.Hide();
-            panel1.Hide();
-            panel3.Hide();
-            panel5.Hide();
+            
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

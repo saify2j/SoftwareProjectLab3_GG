@@ -24,7 +24,6 @@ cv2.imwrite('yellow.png', res_yellow)
 ######### For Green Color##############
 #[ 51 127 174] [ 71 147 254]
 lower_blue = np.array([	51, 127, 174])
-#upper_blue = np.array([145, 255, 255])
 upper_blue = np.array([71, 147, 254])
 mask = cv2.inRange(hsv, lower_blue, upper_blue)
 res_blue = cv2.bitwise_and(image, image, mask=mask)

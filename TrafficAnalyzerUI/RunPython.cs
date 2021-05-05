@@ -12,6 +12,9 @@ namespace TrafficAnalyzerUI
     {
         public static string run_cmd(string cmd, string args)
         {
+            Console.WriteLine(args);
+            // args = "@" + string.Format("\"{0}\"", args);
+            // Console.WriteLine(args);
             ProcessStartInfo start = new ProcessStartInfo();
             start.FileName = "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\Python37_64\\python.exe";
             start.Arguments = string.Format("{0} {1}", cmd, args);

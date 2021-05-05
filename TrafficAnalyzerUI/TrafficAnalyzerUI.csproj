@@ -76,9 +76,190 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="PythonBackend\Images\images_data.zip" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="panel2.PNG" />
+    <Content Include="PythonBackend\Codes\analyze.py">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Codes\test.py">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Codes\\test.py</TargetPath>
+    </Content>
+    <Content Include="PythonBackend\Images\Dhanmondi.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Farmgate.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Gulshan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Kalabagan.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Karwan Bazar.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Katabon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Mirpur 1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Mirpur 10.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\MohakhaliOld.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Mohammadpur.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Sadarghat.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Shahbagh.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Tejgaon.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="PythonBackend\Images\Uttara.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Dhanmondi-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Dhanmondi-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Farmgate-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Farmgate-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Gulshan-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Gulshan-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Kalabagan-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Kalabagan-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Kamalapur-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Kamalapur-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Karwan Bazar-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Karwan Bazar-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Katabon-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Katabon-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Mirpur 1-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Mirpur 1-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Mirpur 10-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Mirpur 10-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Mohammadpur-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Mohammadpur-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Mohakhali-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\mohkhali-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Sadarghat-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Sadarghat-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Shahbagh-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Shahbagh-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Tejgaon-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Tejgaon-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_CSV\Uttara-test-final.csv">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_CSV\\Uttara-test-final.csv</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Dhanmondi-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Dhanmondi-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Farmgate-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Farmgate-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Gulshan-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Gulshan-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Kalabagan-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Kalabagan-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Kamalapur-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Kamalapur-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Karwan Bazar-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Karwan Bazar-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Katabon-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Katabon-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Mirpur 1-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Mirpur 1-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Mirpur 10-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Mirpur 10-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Mohakhali-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Mohakhali-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Mohammadpur-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Mohammadpur-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Sadarghat-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Sadarghat-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Shahbagh-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Shahbagh-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Tejgaon-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Tejgaon-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Dataset_Pixels\Uttara-pixels.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Dataset_Pixels\\Uttara-pixels.txt</TargetPath>
+    </ContentWithTargetPath>
+    <ContentWithTargetPath Include="PythonBackend\Images\Mohakhali.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <TargetPath>Images\\Mohakhali.png</TargetPath>
+    </ContentWithTargetPath>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PythonBackend\Codes\test.py" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
